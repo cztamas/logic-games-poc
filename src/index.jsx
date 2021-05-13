@@ -2,10 +2,11 @@
 
 const React = require('react');
 const ReactDOM = require('react-dom');
-
-ReactDOM.render(
-  <h1>Hello, world!</h1>,
-  document.getElementById('app')
-);
+const App = require('./components/app');
 
 require('./style.css');
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('app')
+);
