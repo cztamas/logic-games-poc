@@ -1,3 +1,10 @@
 h1 {
   text-align: center;
 }
+
+div.cell {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border: 1px solid red;
+}
