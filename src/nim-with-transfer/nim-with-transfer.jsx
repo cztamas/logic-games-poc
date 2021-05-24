@@ -1,6 +1,7 @@
 'use strict';
 
 const React = require('react');
+const { Link } = require('react-router-dom');
 
 const startPosition = [5, 4, 8, 12];
 const range = length => Array(length).fill('').map((_, index) => index);
@@ -91,6 +92,7 @@ module.exports = class NimWithTransfer extends React.Component {
         { this.board() }
         { this.status() }
         <button onClick={ this.clear }>Új játék</button>
+        <Link to="/">Vissza a főoldalra</Link>
       </div>
     );
   }
