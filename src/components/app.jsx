@@ -5,7 +5,7 @@ const React = require('react');
 const startPosition = [5, 4, 8, 12];
 const range = length => Array(length).fill('').map((_, index) => index);
 const sum = array => array.reduce((sum, item) => sum + item, 0);
-const maxItemsToRemove = 8;
+const maxItemsToRemove = 3;
 
 module.exports = class App extends React.Component {
   constructor() {

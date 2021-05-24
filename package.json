@@ -6,6 +6,7 @@
   "scripts": {
     "build-dev": "webpack serve --config build-config/webpack.dev.config.js --open",
     "build-prod": "webpack --config build-config/webpack.prod.config.js",
+    "deploy-staging": "npm run build-prod && node scripts/deploy.js",
     "lint": "eslint 'src/**/*.jsx'",
     "start": "npm run build-dev",
     "test:once": "jasmine --config=test-config/jasmine.json",
@@ -31,6 +32,7 @@
     "@babel/preset-env": "7.14.2",
     "@babel/preset-react": "7.13.13",
     "@babel/register": "7.13.16",
+    "@google-cloud/storage": "5.8.5",
     "@testing-library/react": "11.2.6",
     "babel-loader": "8.2.2",
     "css-loader": "5.2.4",

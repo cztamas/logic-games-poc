@@ -9,3 +9,6 @@ jobs:
       - uses: actions/checkout@v2
       - run: npm ci
       - run: npm t
+      - run: npm run deploy-staging
+        env:
+          GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
