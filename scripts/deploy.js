@@ -15,7 +15,10 @@ const storage = new Storage({
   try {
     const filePath = path.join(__dirname, '../dist/app.js');
     const bucket = storage.bucket(bucketName);
-    await bucket.upload(filePath);
+    await bucket.upload(filePath, {
+      destination: 'staging.js',
+      metadata: { cacheControl: 'no-cache' }
+    });
 
     console.log(`uploaded app.js to bucket ${bucketName}`);
   } catch (error) {
