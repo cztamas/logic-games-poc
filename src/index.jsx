@@ -4,7 +4,7 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 const App = require('./components/app');
 
-require('./style.css');
+require('./style.scss');
 
 ReactDOM.render(
   <App />,
