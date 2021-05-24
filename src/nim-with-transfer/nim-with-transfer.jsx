@@ -7,7 +7,7 @@ const range = length => Array(length).fill('').map((_, index) => index);
 const sum = array => array.reduce((sum, item) => sum + item, 0);
 const maxItemsToRemove = 3;
 
-module.exports = class App extends React.Component {
+module.exports = class NimWithTransfer extends React.Component {
   constructor() {
     super();
     this.clear = this.clear.bind(this);
@@ -82,7 +82,7 @@ module.exports = class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Hello, world!</h1>
+        <h1>Furcsa játék</h1>
         <div className="description">
           Egy lépésben legfeljebb { maxItemsToRemove } elemet elvehetsz a legalsó sorból,
           vagy egy fentebbi sorból az eggyel lejjebb lévőbe mozgathatsz.
