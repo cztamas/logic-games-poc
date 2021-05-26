@@ -2,6 +2,7 @@
 
 const React = require('react');
 const { Link } = require('react-router-dom');
+const Button = require('@material-ui/core/Button').default;
 
 module.exports = class UselessExampleGame extends React.Component {
   constructor() {
@@ -14,18 +15,25 @@ module.exports = class UselessExampleGame extends React.Component {
 
   buttons() {
     return (
-      <div>
-        <button onClick={ () => this.endGame(true) }>Nyerni szeretnék</button>
-        <button onClick={ () => this.endGame(false) }>Veszíteni szeretnék</button>
+      <div className="mb1">
+        <Button variant="contained" color="primary" onClick={ () => this.endGame(true) }>
+          Nyerni szeretnék
+        </Button>
+        <span className="mr1"></span>
+        <Button variant="contained" color="secondary" onClick={ () => this.endGame(false) }>
+          Veszíteni szeretnék
+        </Button>
       </div>
     );
   }
 
   result() {
     return (
-      <div>
+      <div className="mb1">
         <h2>{ this.state.result === 'win' ? 'Gratulálunk! Nyertél!' : 'Vesztettél :(' }</h2>
-        <button onClick={ this.clear }>Új játék</button>
+        <Button variant="contained" color="primary" onClick={ this.clear }>
+          Új játék
+        </Button>
       </div>
     );
   }
