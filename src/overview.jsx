@@ -8,7 +8,8 @@ module.exports = function Overview() {
     <div>
       <h1>Válassz egy játékot!</h1>
       <Link to="/strange">Furcsa játék</Link><br />
-      <Link to="/useless">Ostoba játék</Link>
+      <Link to="/useless">Ostoba játék</Link><br />
+      <Link to="/catch-the-thief">Rablókergetős játék</Link>
     </div>
   );
 };
