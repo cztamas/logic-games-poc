@@ -37,8 +37,9 @@ module.exports = class CatchTheThief extends React.Component {
     const endNode = graphNodeById(endNodeId);
     const { x: x1, y: y1 } = coordinates(startNode.row, startNode.column);
     const { x: x2, y: y2 } = coordinates(endNode.row, endNode.column);
+    const id = `${startNodeId}-${endNodeId}`;
 
-    return <line stroke="black" strokeWidth="0.6" x1={ x1 } y1={ y1 } x2={ x2 } y2={ y2 } />;
+    return <line stroke="black" strokeWidth="0.6" x1={ x1 } y1={ y1 } x2={ x2 } y2={ y2 } key={ id } />;
   }
 
   board() {

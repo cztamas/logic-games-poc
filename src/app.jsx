@@ -4,7 +4,7 @@ const React = require('react');
 const { useRoutes } = require('react-router-dom');
 const ScopedCssBaseline = require('@material-ui/core/ScopedCssBaseline').default;
 const AppBar = require('@material-ui/core/AppBar').default;
-const ToolBar = require('@material-ui/core/ToolBar').default;
+const ToolBar = require('@material-ui/core/Toolbar').default;
 const Button = require('@material-ui/core/Button').default;
 
 const Overview = require('./overview');
