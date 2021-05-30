@@ -1,7 +1,21 @@
 @import 'basscss/css/basscss.css';
 
+html, body {
+  margin: 0;
+}
+
+.app-container {
+  position: fixed;
+  top: 64px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 h1 {
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 button {

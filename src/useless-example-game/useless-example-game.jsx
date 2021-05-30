@@ -1,7 +1,6 @@
 'use strict';
 
 const React = require('react');
-const { Link } = require('react-router-dom');
 const Button = require('@material-ui/core/Button').default;
 
 module.exports = class UselessExampleGame extends React.Component {
@@ -49,11 +48,11 @@ module.exports = class UselessExampleGame extends React.Component {
   }
 
   render() {
-    return <div>
-      <h1>Teljesen haszontalan játék</h1>
-      { this.state.result ? this.result() : this.buttons() }
-
-      <Link to="/">Vissza a főoldalra</Link>
-    </div>;
+    return (
+      <div>
+        <h1 className="h1 mb2">Teljesen haszontalan játék</h1>
+        { this.state.result ? this.result() : this.buttons() }
+      </div>
+    );
   }
 };

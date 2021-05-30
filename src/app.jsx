@@ -3,6 +3,9 @@
 const React = require('react');
 const { useRoutes } = require('react-router-dom');
 const ScopedCssBaseline = require('@material-ui/core/ScopedCssBaseline').default;
+const AppBar = require('@material-ui/core/AppBar').default;
+const ToolBar = require('@material-ui/core/ToolBar').default;
+const Button = require('@material-ui/core/Button').default;
 
 const Overview = require('./overview');
 const NimWithTransfer = require('./nim-with-transfer/nim-with-transfer');
@@ -19,7 +22,14 @@ const routes = [
 module.exports = function App() {
   return (
     <ScopedCssBaseline>
-      { useRoutes(routes) }
+      <AppBar>
+        <ToolBar>
+          <Button color="inherit" href="#/">Vissza a főoldalra</Button>
+        </ToolBar>
+      </AppBar>
+      <div className="app-container p2">
+        { useRoutes(routes) }
+      </div>
     </ScopedCssBaseline>
   );
 };

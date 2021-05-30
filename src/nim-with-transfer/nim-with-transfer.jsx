@@ -1,7 +1,7 @@
 'use strict';
 
 const React = require('react');
-const { Link } = require('react-router-dom');
+const Button = require('@material-ui/core/Button').default;
 
 const startPosition = [5, 4, 8, 12];
 const range = length => Array(length).fill('').map((_, index) => index);
@@ -83,7 +83,7 @@ module.exports = class NimWithTransfer extends React.Component {
   render() {
     return (
       <div>
-        <h1>Furcsa játék</h1>
+        <h1 className="h1 mb2">Furcsa játék</h1>
         <div className="description">
           Egy lépésben legfeljebb { maxItemsToRemove } elemet elvehetsz a legalsó sorból,
           vagy egy fentebbi sorból az eggyel lejjebb lévőbe mozgathatsz.
@@ -91,8 +91,9 @@ module.exports = class NimWithTransfer extends React.Component {
 
         { this.board() }
         { this.status() }
-        <button onClick={ this.clear }>Új játék</button>
-        <Link to="/">Vissza a főoldalra</Link>
+        <Button variant="contained" color="primary" onClick={ this.clear }>
+          Új játék
+        </Button>
       </div>
     );
   }
